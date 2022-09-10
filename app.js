@@ -1,8 +1,11 @@
 const express = require("express");
 const morgan = require("morgan");
+// import routers from route file
+const teaRouter = require("./routes/teaRoutes");
+
 // initialize app
 const app = express();
-
+// set EJS as view engine
 app.set("view engine", "ejs");
 
 // MIDDLEWARE
@@ -14,8 +17,11 @@ if (process.env.NODE_ENV === "development") {
 // parses incoming JSON requests and puts the parsed data in req
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// app.get("/", (req, res) => {
+//   res.render("index");
+// });
+
+// ROUTER
+app.use("/api/v1/teas", teaRouter);
 
 module.exports = app;

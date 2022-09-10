@@ -5,18 +5,18 @@ const mongoose = require("mongoose");
 dotenv.config({ path: "./config.env" });
 
 // save connection string to variable and replace password placeholder with db password
-// const DB = process.env.DATABASE.replace(
-//   "<PASSWORD>",
-//   process.env.DATABASE_PASSWORD
-// );
+const DB = process.env.DATABASE.replace(
+  "<PASSWORD>",
+  process.env.DATABASE_PASSWORD
+);
 
 // use mongoose connect to connect to the db
-// mongoose
-//   .connect(DB)
-//   .then(() => {
-//     console.log("Connected to DB");
-//   })
-//   .catch((err) => console.log(err));
+mongoose
+  .connect(DB)
+  .then(() => {
+    console.log("Connected to DB");
+  })
+  .catch((err) => console.log(err));
 
 // app must be read after the config of the dotenv variables
 const app = require("./app");

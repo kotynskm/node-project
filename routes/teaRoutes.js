@@ -5,5 +5,6 @@ const teaController = require("../controllers/teaController");
 
 // routes
 router.route("/").get(teaController.getAllTeas);
+router.route("/:id").get(teaController.getTea);
 
 module.exports = router;

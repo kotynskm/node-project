@@ -18,3 +18,21 @@ exports.getAllTeas = async (req, res) => {
     });
   }
 };
+
+exports.getTea = async (req, res) => {
+  try {
+    const tea = await Tea.findById(req.params.id);
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        tea,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err,
+    });
+  }
+};

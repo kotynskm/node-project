@@ -28,3 +28,25 @@ exports.signup = async (req, res, next) => {
     });
   }
 };
+
+exports.login = (req, res, next) => {
+  //   const email = req.body.email;
+  //   const password = req.body.password;
+  const { email, password } = req.body;
+
+  // check if email and password exist
+  if (!email || !password) {
+    // need to implement appError error handling
+    return next(err);
+  }
+
+  // check if user exists and password is correct
+  const user = User.findOne({ email: email });
+
+  // if all checks out, send a jwt token to client
+  const token = "";
+  res.status(200).json({
+    status: "success",
+    token,
+  });
+};

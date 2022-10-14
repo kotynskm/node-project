@@ -26,6 +26,8 @@ const userSchema = new Schema({
     type: String,
     required: [true, "Please provide a password"],
     minLength: 8,
+    // prevents the password field from showing up in the output when we call the get users route
+    select: false,
   },
   passwordConfirm: {
     type: String,

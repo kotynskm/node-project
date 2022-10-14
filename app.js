@@ -24,6 +24,6 @@ app.use(express.json());
 
 // ROUTER
 app.use("/api/v1/teas", teaRouter);
-app.use("api/v1/users", userRouter);
+app.use("/api/v1/users", userRouter);
 
 module.exports = app;

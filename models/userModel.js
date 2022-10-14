@@ -53,6 +53,14 @@ userSchema.pre("save", async function (next) {
   this.passwordConfirm = undefined;
   next();
 });
+
+// compare two passwords, we can't use this.password here because it has select field in the model so it's hidden in the output
+userSchema.methods.correctPassword = async function (
+  candidatePassword,
+  userPassword
+) {
+  return await bcrypt.compare(candidatePassword, userPassword);
+};
 // create the User Model
 const User = mongoose.model("User", userSchema);
 

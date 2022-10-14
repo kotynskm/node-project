@@ -1,13 +1,18 @@
 const express = require("express");
 const morgan = require("morgan");
+const path = require("path");
 // import routers from route file
 const teaRouter = require("./routes/teaRoutes");
 const userRouter = require("./routes/userRoutes");
 
 // initialize app
 const app = express();
-// set EJS as view engine
-app.set("view engine", "ejs");
+// set pug as view engine
+app.set("view engine", "pug");
+// use path to get dir name and join with views to allow access to views folder
+app.set("views", path.join(__dirname, "views"));
+// serving static files
+app.use(express.static(path.join(__dirname, "public")));
 
 // MIDDLEWARE
 // morgan 'dev' gives us information back about the response when a route is called
@@ -23,6 +28,11 @@ app.use(express.json());
 // });
 
 // ROUTER
+app.get("/", (req, res) => {
+  res.status(200).render("base");
+});
+
+// ROUTER ROUTES
 app.use("/api/v1/teas", teaRouter);
 app.use("/api/v1/users", userRouter);
 

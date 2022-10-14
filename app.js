@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 // import routers from route file
 const teaRouter = require("./routes/teaRoutes");
+const userRouter = require("./routes/userRoutes");
 
 // initialize app
 const app = express();
@@ -23,5 +24,6 @@ app.use(express.json());
 
 // ROUTER
 app.use("/api/v1/teas", teaRouter);
+app.use("api/v1/users", userRouter);
 
 module.exports = app;

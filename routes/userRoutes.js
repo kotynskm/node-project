@@ -3,9 +3,10 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 const authController = require("../controllers/authController");
 
-// user routes
+// user creation route
 router.route("/signup").post(authController.signup);
 
+// user routes
 router
   .route("/")
   .get(userController.getAllUsers)

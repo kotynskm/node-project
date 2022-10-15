@@ -2,3 +2,27 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
+header {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+footer {
+  background-color: aliceblue;
+}
+
+ul.footer__nav {
+  font-family: cursive;
+}
+
+section.overview {
+  text-align: center;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}

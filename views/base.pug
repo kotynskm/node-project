@@ -7,8 +7,31 @@ html(lang="en")
         title Be My Boba
         link(rel="stylesheet" href="css/style.css")
         link(rel="icon" type="image/x-icon" href="/img/favicon.ico")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css")
     body
-        h1 Be My Boba
-        p Welcome to my tea shop!
+        // HEADER
+        header.header
+            nav.nav.nav--teas
+                a.nav__el(href="#") View All Teas
+            .header__logo
+                img(src="/img/bobamilk.png" alt="Boba Tea Logo")
+            nav.nav.nav--user 
+                //- a.nav__el(href="#") My Teas
+                //- a.nav__el(href="#")
+                //-     img.nav__user-img(src="img/user.jpg" alt="User Photo")
+                //-     span Kailey
+                button.nav__el.nav__el--cta.btn.btn-light Sign Up 
+                button.nav__el.btn.btn-light Login
+        // CONTENT
+        section.overview 
+            h1 Be My Boba
+
+        // FOOTER
+        footer.footer 
+            ul.footer__nav 
+                li: a(href="#") About Us 
+                li: a(href="#") Careers 
+                li: a(href="#") Contact 
+
 
 

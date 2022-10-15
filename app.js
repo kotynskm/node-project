@@ -29,7 +29,10 @@ app.use(express.json());
 
 // ROUTER
 app.get("/", (req, res) => {
-  res.status(200).render("base");
+  res.status(200).render("base", {
+    tea: "Honey Boba Tea",
+    user: "kailey",
+  });
 });
 
 // ROUTER ROUTES

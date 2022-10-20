@@ -4,7 +4,7 @@
 
 # Project Overview
 
-Tea Shop is a project I created to expand my knowledge of Node.js, Express.js, MongoDB and RESTful API development. It was created with MVC file structure. Tea routes are implemented to display info about teas in the database, or info about an individual tea by ID. User routes are implemented to display info, create, update, and delete users. Views are implemented using pug templating language.
+Tea Shop is a project I created to expand my knowledge of Node.js, Express.js, MongoDB and RESTful API development. It was created with MVC file structure. I also learned how to model data using a NoSQL database, how to use Postman to view responses from routes, and how to use middleware and NPM package manager.
 
 ## Technologies
 
@@ -28,4 +28,7 @@ Tea Shop is a project I created to expand my knowledge of Node.js, Express.js, M
 
 #### Features
 
-Tea routes are implemented to display info about teas in the database, or info about an individual tea by ID. User routes are implemented to display info, create, update, and delete users. Views are implemented using pug templating language.
+- Tea routes/controllers are implemented to display info about teas in the database, or info about an individual tea by ID.
+- User routes/controllers are implemented to display info, create, update, and delete users.
+- Views are implemented using pug templating language.
+- User authentication is handled using jwt tokens and password encryption with bcrypt.

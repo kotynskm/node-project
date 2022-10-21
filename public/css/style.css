@@ -25,4 +25,9 @@ section.overview {
 img {
   height: 100px;
   width: 100px;
+  margin-left: 70px;
+}
+
+h1.title {
+  margin-left: 20px;
 }

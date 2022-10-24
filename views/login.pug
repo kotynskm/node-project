@@ -1,0 +1,16 @@
+extends base
+
+block content 
+    main.main
+        .login-container 
+            .login-form 
+                h2.heading-secondary Login to your Account!
+                form.form
+                    .form__group 
+                        label.form__input(for="email") Email 
+                        input#email.form__input(type="email", placeholder="nickname@email.com", required)
+                    .form__group 
+                        label.form__input(for="password") Password
+                        input#password.form__input(type="password", placeholder="*********", required, minLength="8")
+                    .form__group 
+                        button.btn.btn-light.login Login

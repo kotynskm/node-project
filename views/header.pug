@@ -1,6 +1,6 @@
 header.header
     nav.nav.nav--teas
-        a.nav__el(href="#") View All Teas
+        a.nav__el(href="/") View All Teas
     .header__logo
         img(src="/img/bobamilk.png" alt="Boba Tea Logo")
     nav.nav.nav--user 
@@ -8,5 +8,5 @@ header.header
         //- a.nav__el(href="#")
         //-     img.nav__user-img(src="img/user.jpg" alt="User Photo")
         //-     span Kailey
-        button.nav__el.nav__el--cta.btn.btn-light Sign Up 
-        button.nav__el.btn.btn-light Login
+        a.nav__el.btn.btn-light(href="/login") Login 
+        a.nav__el.btn.btn-light(href="#") Sign Up

@@ -15,6 +15,13 @@ exports.getTea = async (req, res) => {
   const tea = await Tea.findById(req.params.id);
 
   res.status(200).render("tea", {
+    title: `${tea.name}`,
     tea,
+  });
+};
+
+exports.getLoginForm = (req, res) => {
+  res.status(200).render("login", {
+    title: "Log into account",
   });
 };

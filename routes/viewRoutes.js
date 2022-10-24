@@ -5,5 +5,6 @@ const viewsController = require("../controllers/viewsController");
 // ROUTES
 router.get("/", viewsController.getOverview);
 router.get("/tea/:id", viewsController.getTea);
+router.get("/login", viewsController.getLoginForm);
 
 module.exports = router;

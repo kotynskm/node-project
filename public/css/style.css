@@ -31,3 +31,13 @@ img {
 h1.title {
   margin-left: 20px;
 }
+
+.card {
+  width: 240px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

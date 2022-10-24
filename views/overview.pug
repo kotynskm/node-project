@@ -1,0 +1,14 @@
+extends base
+
+block content 
+    main.main
+        .container 
+            each tea in teas
+                div.card
+                    img(src= `img/${tea.image}`, alt=`${tea.name}`)
+                    .card-body 
+                        h5.card-title= tea.name
+                        p.card-text= tea.summary
+                        a.card-nav(href=`/tea/${tea._id}`) View Tea Details
+
+

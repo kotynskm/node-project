@@ -4,6 +4,7 @@ const path = require("path");
 // import routers from route file
 const teaRouter = require("./routes/teaRoutes");
 const userRouter = require("./routes/userRoutes");
+const viewRouter = require("./routes/viewRoutes");
 
 // initialize app
 const app = express();
@@ -26,16 +27,7 @@ app.use(express.json());
 // app.get("/", (req, res) => {
 //   res.render("index");
 // });
-
-// ROUTER
-app.get("/", (req, res) => {
-  res.status(200).render("base", {
-    tea: "Honey Boba Tea",
-    user: "kailey",
-  });
-});
-
-// ROUTER ROUTES
+app.use("/", viewRouter);
 app.use("/api/v1/teas", teaRouter);
 app.use("/api/v1/users", userRouter);
 

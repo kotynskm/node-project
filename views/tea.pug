@@ -1,0 +1,14 @@
+extends base
+
+block content 
+    main.main
+        .container 
+            div.card.mb-3
+                img(src= `/img/${tea.image}`, alt=`${tea.name}`)
+                .card-body 
+                    h5.card-title= tea.name
+                    p.card-text= tea.description
+                    p.card-text= tea.price
+                button.btn.btn-light Add to cart
+
+                    

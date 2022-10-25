@@ -1,7 +1,8 @@
 extends base
 
 block content 
-    main.main
+    main.main.container-fluid
+        h1.title The Tea Shop
         .container 
             each tea in teas
                 div.card
@@ -9,6 +10,6 @@ block content
                     .card-body 
                         h5.card-title= tea.name
                         p.card-text= tea.summary
-                        a.card-nav(href=`/tea/${tea._id}`) View Tea Details
+                        a.card-nav.nav__el(href=`/tea/${tea._id}`) View Tea Details
 
 

@@ -2,11 +2,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html,
+.main {
+  background-color: #efe9f4;
+}
+
+.title {
+  text-align: center;
+  padding: 20px;
+}
+
 header {
   background-color: aliceblue;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
 }
 
 footer {
@@ -14,6 +23,10 @@ footer {
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  margin-right: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer__nav {
@@ -48,7 +61,7 @@ h1.title {
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .container-tea {
@@ -76,7 +89,7 @@ input[type="password"] {
 }
 
 .user-img {
-  border: #000000 2px solid;
+  border: #ffffff 2px solid;
   border-radius: 80px;
 }
 
@@ -88,11 +101,8 @@ input[type="password"] {
 .nav__el:link,
 .nav__el:visited {
   color: #000000;
-  text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-decoration: none;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -110,12 +120,4 @@ input[type="password"] {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
   text-shadow: 0 0.7rem 1rem rgb(85, 83, 83);
-}
-
-.alert--error {
-  background-color: red;
-}
-
-.alert--success {
-  background-color: greenyellow;
 }

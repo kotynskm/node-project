@@ -30,12 +30,14 @@ Tea Shop is a project I created to expand my knowledge of Node.js, Express.js, M
 
 <img src="/public/img/homepage.png" align="right" width="50%">
 <img src="/public/img/tea.png" align="right" width="50%">
+
 - Tea routes/controllers are implemented to display info about teas in the database, or info about an individual tea by ID.
 - User routes/controllers are implemented to display info, create, update, and delete users.
 
 #### User Authentication
 
 <img src="/public/img/login.png" align="right" width="50%">
+
 - User authentication/login/logout is handled using jwt tokens, cookies, and password encryption with bcrypt.
 
 #### Views/Templating Language

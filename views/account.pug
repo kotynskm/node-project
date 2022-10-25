@@ -1,0 +1,19 @@
+extends base
+
+block content 
+    main.main 
+        .user-view__content 
+            .user-view__form-container 
+                h2.heading-secondary Your Account Settings 
+                form.form.form-user-data
+                    .form__group 
+                        label.form__label(for="name") Name 
+                        input#name.form__input(type="text", value= `${user.name}`, required)
+                    .form__group 
+                        label.form__label(for="email") Email Address
+                        input#name.form__input(type="email", value= `${user.email}`, required)
+                    .form__group.form__photo-upload 
+                        img.form__user-photo(src=`/img/users/${user.photo}`, alt="User photo")
+                        a.btn-text.nav__el(href="") Choose New Photo
+                    .form__group.right 
+                        button.btn.btn-light Save Settings

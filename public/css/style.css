@@ -74,7 +74,8 @@ h1.title {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -84,14 +85,16 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-.login-container {
+.login-container,
+.user-view__form-container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
   margin: 100px;
 }
 
-.user-img {
+.user-img,
+.form__user-photo {
   border: #ffffff 2px solid;
   border-radius: 80px;
 }

@@ -6,7 +6,7 @@ header.header
             a.logout.nav__el(href="/logout") Logout
             a.nav__el.user-name(href="#")
                 img.user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
-                span= user.name
+                //- span= user.name
         else
             a.nav__el.btn.btn-light(href="/login") Login 
             a.nav__el.btn.btn-light(href="#") Sign Up

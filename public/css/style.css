@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 html,
@@ -56,6 +56,8 @@ h1.title {
 
 .card {
   width: 240px;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .container {
@@ -119,5 +121,5 @@ input[type="password"] {
 .nav__el:active {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
-  text-shadow: 0 0.7rem 1rem rgb(85, 83, 83);
+  text-shadow: 0 0.7rem 1rem #5fbff9;
 }

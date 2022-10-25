@@ -113,24 +113,35 @@ exports.login = async (req, res, next) => {
   createSendToken(user, 200, res);
 };
 
+exports.logout = (req, res) => {
+  res.cookie("jwt", "loggedout", {
+    expires: new Date(Date.now() + 10 * 1000),
+    httpOnly: true,
+  });
+  res.status(200).json({ status: "success" });
+};
 // only for rendered pages, verify if a user is logged in
 exports.isLoggedIn = async (req, res, next) => {
   // verify token
   if (req.cookies.jwt) {
-    const decoded = await util.promisify(jwt.verify)(
-      req.cookies.jwt,
-      process.env.JWT_SECRET
-    );
+    try {
+      const decoded = await util.promisify(jwt.verify)(
+        req.cookies.jwt,
+        process.env.JWT_SECRET
+      );
 
-    // check if user exists
-    const currentUser = await User.findById(decoded.id);
-    if (!currentUser) {
+      // check if user exists
+      const currentUser = await User.findById(decoded.id);
+      if (!currentUser) {
+        return next();
+      }
+
+      // there is a logged in user
+      res.locals.user = currentUser; // this will allow us to access variable inside pug templates (use res.locals)
+      return next();
+    } catch (err) {
       return next();
     }
-
-    // there is a logged in user
-    res.locals.user = currentUser; // this will allow us to access variable inside pug templates (use res.locals)
-    return next();
   }
   // if there is no cookie
   next();

@@ -12,10 +12,19 @@ header {
 footer {
   background-color: aliceblue;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-ul.footer__nav {
-  font-family: cursive;
+.footer__nav {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+li {
+  display: inline;
+  padding: 10px 30px;
 }
 
 section.overview {
@@ -40,6 +49,12 @@ h1.title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.container-tea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input[type="email"],
@@ -95,4 +110,12 @@ input[type="password"] {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
   text-shadow: 0 0.7rem 1rem rgb(85, 83, 83);
+}
+
+.alert--error {
+  background-color: red;
+}
+
+.alert--success {
+  background-color: greenyellow;
 }

@@ -3,9 +3,9 @@ header.header
         a.nav__el(href="/") View All Teas
     nav.nav.nav--user 
         if user
-            a.nav__el.btn.btn-light(href="#") Logout
+            a.logout.nav__el.btn.btn-light(href="/logout") Logout
             a.nav__el(href="#")
-                img.user-img(src=`img/users/${user.photo}` alt=`Photo of ${user.name}`)
+                img.user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
                 span= user.name
         else
             a.nav__el.btn.btn-light(href="/login") Login 

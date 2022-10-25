@@ -4,9 +4,11 @@ header.header
     .header__logo
         img(src="/img/bobamilk.png" alt="Boba Tea Logo")
     nav.nav.nav--user 
-        //- a.nav__el(href="#") My Teas
-        //- a.nav__el(href="#")
-        //-     img.nav__user-img(src="img/user.jpg" alt="User Photo")
-        //-     span Kailey
-        a.nav__el.btn.btn-light(href="/login") Login 
-        a.nav__el.btn.btn-light(href="#") Sign Up
+        if user
+            a.nav__el.btn.btn-light(href="#") Logout
+            a.nav__el(href="#")
+                img.nav__user-img(src=`img/users/${user.photo}` alt=`Photo of ${user.name}`)
+                span= user.name
+        else
+            a.nav__el.btn.btn-light(href="/login") Login 
+            a.nav__el.btn.btn-light(href="#") Sign Up

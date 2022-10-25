@@ -5,6 +5,9 @@ const path = require("path");
 const teaRouter = require("./routes/teaRoutes");
 const userRouter = require("./routes/userRoutes");
 const viewRouter = require("./routes/viewRoutes");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
 // initialize app
 const app = express();
@@ -23,7 +26,16 @@ if (process.env.NODE_ENV === "development") {
 
 // parses incoming JSON requests and puts the parsed data in req
 app.use(express.json());
+// parses data from cookies
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
+// test middleware
+app.use((req, res, next) => {
+  console.log(req.cookies);
+  next();
+});
 // app.get("/", (req, res) => {
 //   res.render("index");
 // });

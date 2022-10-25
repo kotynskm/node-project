@@ -1,6 +1,5 @@
 // use axios to get post request
 const login = async (email, password) => {
-  console.log(email);
   try {
     const res = await axios({
       method: "POST",
@@ -10,9 +9,15 @@ const login = async (email, password) => {
         password,
       },
     });
-    console.log(res);
+
+    if (res.data.status === "success") {
+      alert("Successfully logged in!");
+      window.setTimeout(() => {
+        location.assign("/");
+      }, 500);
+    }
   } catch (err) {
-    console.log(err.response.data);
+    alert("Incorrect Login Information");
   }
 };
 

@@ -1,17 +1,17 @@
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
   background-color: aliceblue;
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 footer {
   background-color: aliceblue;
+  margin-top: 20px;
 }
 
 ul.footer__nav {
@@ -60,6 +60,39 @@ input[type="password"] {
   margin: 100px;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+.user-img {
+  border: #000000 2px solid;
+  border-radius: 80px;
+}
+
+.nav--user {
+  margin-right: 1rem;
+}
+
+.nav__el,
+.nav__el:link,
+.nav__el:visited {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: 400;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.nav__el:hover,
+.nav__el:active {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  text-shadow: 0 0.7rem 1rem rgb(85, 83, 83);
 }

@@ -1,13 +1,11 @@
 header.header
     nav.nav.nav--teas
         a.nav__el(href="/") View All Teas
-    .header__logo
-        img(src="/img/bobamilk.png" alt="Boba Tea Logo")
     nav.nav.nav--user 
         if user
             a.nav__el.btn.btn-light(href="#") Logout
             a.nav__el(href="#")
-                img.nav__user-img(src=`img/users/${user.photo}` alt=`Photo of ${user.name}`)
+                img.user-img(src=`img/users/${user.photo}` alt=`Photo of ${user.name}`)
                 span= user.name
         else
             a.nav__el.btn.btn-light(href="/login") Login 

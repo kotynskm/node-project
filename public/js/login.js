@@ -25,7 +25,7 @@ const login = async (email, password) => {
 };
 
 // DOM ELEMENTS
-const loginForm = document.querySelector(".form");
+const loginForm = document.querySelector(".form--login");
 
 // DELEGATION
 if (loginForm) {

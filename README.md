@@ -4,7 +4,7 @@
 
 # Project Overview
 
-Tea Shop is a project I created to expand my knowledge of Node.js, Express.js, MongoDB and RESTful API development. It was created with MVC file structure. I also learned how to model data using a NoSQL database, how to use Postman to view responses from routes, and how to use middleware and NPM package manager.
+Tea Shop is a project I created in conjunction with an online course to expand my knowledge of Node.js, Express.js, MongoDB and RESTful API development. It was created with MVC file structure. I also learned how to model data using a NoSQL database, how to use Postman to view responses from routes, and how to use middleware and NPM package manager.
 
 ## Technologies
 

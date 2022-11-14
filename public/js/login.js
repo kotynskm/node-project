@@ -24,6 +24,28 @@ const login = async (email, password) => {
   }
 };
 
+const signup = async (email, password) => {
+  try {
+    const res = await axios({
+      method: "POST",
+      url: "http://localhost:3000/api/v1/users/signup",
+      data: {
+        email,
+        password,
+      },
+    });
+
+    if (res.data.status === "success") {
+      alert("User Created!");
+      window.setTimeout(() => {
+        location.assign("/");
+      }, 500);
+    }
+  } catch (err) {
+    alert("Incorrect Information!");
+  }
+};
+
 // DOM ELEMENTS
 const loginForm = document.querySelector(".form--login");
 
